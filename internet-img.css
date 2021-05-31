@@ -1,45 +1,90 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    list-style: none;
-    text-decoration: none;
+    font-family: "VERDANA",sans-serif;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background: #f1f1f1;
+.header{
+  height: 100px;
+  background: #000000;
+  padding: 0 20px;
+  color: #fff;
 }
-#menu{
-    margin: 0;
-    padding: 0;
-    margin-top: 40px;
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
 }
-#menu li{
-    list-style: none;
-    display: inline-block;
+header{
+  padding: 25px;
+  min-width: 105%;
 }
-#menu li a{
-    text-decoration: none;
-    position: relative;
-    color: #313131;
-    font-size: 30px;
-    font-weight: 1000;
-    font-family: sans-serif;
-    display: block;
-    overflow: hidden;
-    transition: 0.7s all;
-    padding: 15px 30px;
+.dws-menu *{
+  margin: 0;
+  padding: 0;
 }
-#menu li a:before{
-    content: '';
-    width: 60px;
-    position: absolute;
-    border-bottom: 8px solid #313131;
-    bottom: 0;
-    right: 350px;
-    transition: 0.7s all;
+.dws-menu ul,
+.dws-menu ol{
+  list-style: none;
 }
-#menu li a:hover:before{
-    right: 0;
+.dws-menu > ul{
+  display: flex;
+  justify-content: center;
+}
+.dws-menu > ul li a{
+  display: block;
+  background: #000;
+  padding: 15px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0,3s ease;
+}
+.dws-menu > ul li{
+  position: relative;
+  border-right: 1px solid #fff;
+}
+.dws-menu > ul li > a i.fa{
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+.dws-menu > ul li:first-child{
+  border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+  border-right: 1px solid #babbbb;
+}
+.dws-menu li a:hover{
+  background: #454547;
+  color: #ffffff;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0,3s ease;
+}
+
+
+
+
+/*sub menu*/
+.dws-menu li ul{
+  position: absolute;
+  min-width: 150px;
+  display: none;
+}
+.dws-menu li > ul li{
+  border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a{
+  padding: 10px;
+  text-transform: none;
+  background: #000;
+}
+.dws-menu li > ul li ul{
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+.dws-menu li:hover > ul{
+  display: block;
 }
